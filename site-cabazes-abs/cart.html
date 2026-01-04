@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FigoDouro — Carrinho</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="blackBar">
+    <div class="barInner">
+      <a class="blackLink" href="index.html#sobre">Sobre nós</a>
+    </div>
+  </div>
+
+  <div class="mainBar">
+    <div class="barInner mainInner">
+      <a class="brand" href="index.html" aria-label="FigoDouro">
+        <img src="abs-logo.svg" alt="FigoDouro" />
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="navLink" href="shop.html">Loja</a>
+        <a class="navLink" href="index.html#sobre">Sobre</a>
+        <a class="navLink" href="index.html#video">Vídeo</a>
+      </nav>
+
+      <div class="search">
+        <div class="searchBox">
+          <span id="iconSearch"></span>
+          <input id="search" placeholder="O que procura?" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="iconBtn" href="cart.html" title="Carrinho">
+          <span id="iconCart"></span>
+          <span class="label">Carrinho</span>
+          <span class="badgeDot" id="cartCount">0</span>
+          <span class="label"><strong><span id="cartTotal">0.00</span> €</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="sectionTitle">
+      <div>
+        <h1>O seu carrinho</h1>
+        <p>Revise os itens e finalize a compra (simulada).</p>
+      </div>
+      <a class="btn light" href="shop.html">Continuar a comprar</a>
+    </div>
+
+    <div class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Qtd</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+
+      <div class="totalBox">
+        <strong>Total: <span id="total">0.00</span> €</strong>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn light" id="clear">Limpar</button>
+          <button class="btn primary" id="finalize">Finalizar compra</button>
+        </div>
+      </div>
+
+      <div class="notice">Finalizar é simulado: gera um número de encomenda e termina.</div>
+    </div>
+
+    <footer class="pageFooter">FigoDouro — checkout simulado (sem pagamentos reais).</footer>
+  </div>
+</main>
+
+<script src="icons.js"></script>
+<script src="header.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

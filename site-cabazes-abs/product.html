@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FigoDouro — Produto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="blackBar">
+    <div class="barInner">
+      <a class="blackLink" href="index.html#sobre">Sobre nós</a>
+    </div>
+  </div>
+
+  <div class="mainBar">
+    <div class="barInner mainInner">
+      <a class="brand" href="index.html" aria-label="FigoDouro">
+        <img src="abs-logo.svg" alt="FigoDouro" />
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="navLink" href="shop.html">Loja</a>
+        <a class="navLink" href="index.html#sobre">Sobre</a>
+        <a class="navLink" href="index.html#video">Vídeo</a>
+      </nav>
+
+      <div class="search">
+        <div class="searchBox">
+          <span id="iconSearch"></span>
+          <input id="search" placeholder="O que procura?" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="iconBtn" href="cart.html" title="Carrinho">
+          <span id="iconCart"></span>
+          <span class="label">Carrinho</span>
+          <span class="badgeDot" id="cartCount">0</span>
+          <span class="label"><strong><span id="cartTotal">0.00</span> €</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="productLayout">
+      <div class="productMedia">
+        <img id="pImg" src="" alt="" />
+      </div>
+
+      <div class="productInfo">
+        <h1 id="pTitle">Produto</h1>
+        <p class="productSub" id="pSub"></p>
+
+        <div class="productText" id="pBody"></div>
+
+        <ul class="productBullets" id="pBullets"></ul>
+
+        <p class="small" id="pSizes"></p>
+
+        <div class="productActions">
+          <a class="btn light" href="index.html#produtos">Voltar</a>
+          <a class="btn" href="shop.html">Ver loja</a>
+          <button class="btn primary" id="addBtn">Adicionar ao carrinho</button>
+        </div>
+
+        <p class="small" id="addHint">Adiciona 1 unidade/kg (ou 1 garrafão no caso do azeite em 5L).</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="icons.js"></script>
+<script src="header.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

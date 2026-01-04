@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FigoDouro — Loja</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="blackBar">
+    <div class="barInner">
+      <a class="blackLink" href="index.html#sobre">Sobre nós</a>
+    </div>
+  </div>
+
+  <div class="mainBar">
+    <div class="barInner mainInner">
+      <a class="brand" href="index.html" aria-label="FigoDouro">
+        <img src="abs-logo.svg" alt="FigoDouro" />
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="navLink" href="shop.html">Loja</a>
+        <a class="navLink" href="index.html#sobre">Sobre</a>
+        <a class="navLink" href="index.html#video">Vídeo</a>
+      </nav>
+
+      <div class="search">
+        <div class="searchBox">
+          <span id="iconSearch"></span>
+          <input id="search" placeholder="O que procura?" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="iconBtn" href="cart.html" title="Carrinho">
+          <span id="iconCart"></span>
+          <span class="label">Carrinho</span>
+          <span class="badgeDot" id="cartCount">0</span>
+          <span class="label"><strong><span id="cartTotal">0.00</span> €</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="sectionTitle">
+      <div>
+        <h1>Loja Online</h1>
+        <p>Azeite, figos e produtos da nossa terra.</p>
+      </div>
+    </div>
+
+    <div id="products" class="grid"></div>
+
+    <footer class="pageFooter">FigoDouro.</footer>
+  </div>
+</main>
+
+<script src="icons.js"></script>
+<script src="header.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

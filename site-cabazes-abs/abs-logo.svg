@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80">
+  <rect width="240" height="80" rx="14" fill="#0f5132"/>
+  <circle cx="42" cy="40" r="18" fill="#ffffff" opacity="0.95"/>
+  <path d="M36 40c8-16 20-16 28 0-8 16-20 16-28 0z" fill="#0f5132"/>
+  <text x="76" y="36" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">Atlântico</text>
+  <text x="76" y="56" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#dff3ea">Business School</text>
+</svg>

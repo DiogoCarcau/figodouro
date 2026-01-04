@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FigoDouro — Produtos da nossa terra</title>
+  <meta name="description" content="FigoDouro: azeite virgem extra, figos e outros produtos da nossa terra, da zona de Suçães, Pai Torto e São Pedro." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="home">
+
+<header class="siteHeader">
+  <div class="blackBar">
+    <div class="barInner">
+      <a class="blackLink" href="index.html#sobre">Sobre nós</a>
+    </div>
+  </div>
+
+  <div class="mainBar">
+    <div class="barInner mainInner">
+      <a class="brand" href="index.html" aria-label="FigoDouro">
+        <img src="abs-logo.svg" alt="FigoDouro" />
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="navLink" href="shop.html">Loja</a>
+        <a class="navLink" href="index.html#sobre">Sobre</a>
+        <a class="navLink" href="index.html#video">Vídeo</a>
+      </nav>
+
+      <div class="search">
+        <div class="searchBox">
+          <span id="iconSearch"></span>
+          <input id="search" placeholder="O que procura?" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="iconBtn" href="cart.html" title="Carrinho">
+          <span id="iconCart"></span>
+          <span class="label">Carrinho</span>
+          <span class="badgeDot" id="cartCount">0</span>
+          <span class="label"><strong><span id="cartTotal">0.00</span> €</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <section class="hero hero-azeite" aria-label="Destaque">
+    <div class="heroOverlay"></div>
+    <div class="heroContent">
+      <p class="heroKicker">FigoDouro • Produção local</p>
+      <h1>Azeite Virgem Extra</h1>
+      <p class="heroSub">Da nossa terra para a sua mesa — sabor autêntico e qualidade que se sente.</p>
+      <div class="heroCtas">
+        <a class="btn primary" href="#produtos">Saber mais</a>
+        <a class="btn" href="shop.html">Ver loja</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" class="homeIntro" aria-label="Produtos">
+    <div class="container">
+      <h2>Produtos da nossa terra</h2>
+      <p class="lead">O mesmo cuidado no campo, a mesma exigência na seleção, e um objetivo simples: levar qualidade verdadeira até si.</p>
+
+      <div class="categoryGrid">
+        <a class="categoryCard" href="product.html?id=azeite" style="--bg:url('images/azeitona.png')">
+          <div class="categoryOverlay"></div>
+          <div class="categoryBody">
+            <h3>Azeite</h3>
+            <p>Virgem extra, equilibrado e fresco.</p>
+          </div>
+        </a>
+
+        <a class="categoryCard" href="product.html?id=figo" style="--bg:url('images/figo.png')">
+          <div class="categoryOverlay"></div>
+          <div class="categoryBody">
+            <h3>Figo</h3>
+            <p>Seleção e cura cuidadas.</p>
+          </div>
+        </a>
+
+        <a class="categoryCard" href="product.html?id=amendoa" style="--bg:url('images/amendoa.png')">
+          <div class="categoryOverlay"></div>
+          <div class="categoryBody">
+            <h3>Amêndoa</h3>
+            <p>Crocante e cheia de sabor.</p>
+          </div>
+        </a>
+
+        <a class="categoryCard" href="product.html?id=noz" style="--bg:url('images/noz.png')">
+          <div class="categoryOverlay"></div>
+          <div class="categoryBody">
+            <h3>Noz</h3>
+            <p>Textura rica e aroma natural.</p>
+          </div>
+        </a>
+
+        <a class="categoryCard" href="product.html?id=feijao-frade" style="--bg:url('images/feijao-frade.png')">
+          <div class="categoryOverlay"></div>
+          <div class="categoryBody">
+            <h3>Feijão-frade</h3>
+            <p>Ideal para saladas e pratos leves.</p>
+          </div>
+        </a>
+
+        <a class="categoryCard" href="product.html?id=grao-de-bico" style="--bg:url('images/grao-de-bico.png')">
+          <div class="categoryOverlay"></div>
+          <div class="categoryBody">
+            <h3>Grão-de-bico</h3>
+            <p>Perfeito para cozidos e húmus.</p>
+          </div>
+        </a>
+
+        <a class="categoryCard" href="product.html?id=feijocas" style="--bg:url('images/feijocas.png')">
+          <div class="categoryOverlay"></div>
+          <div class="categoryBody">
+            <h3>Feijocas</h3>
+            <p>Tradicional, consistente e saboroso.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="homeBand" aria-label="Sobre">
+    <div class="containerNarrow">
+      <h2>Produtos da zona de Suçães, Pai Torto e São Pedro</h2>
+      <p>Pensado para quem valoriza origem, tradição e qualidade. Aqui, o cuidado começa na plantação e continua em cada etapa até chegar ao cliente.</p>
+    </div>
+  </section>
+
+  <section id="video" class="videoSection" aria-label="Vídeo">
+    <div class="container">
+      <h2>Vídeo Institucional</h2>
+      <div class="videoFrame smallVideo">
+        <video controls preload="metadata" poster="images/quinta.jpg">
+          <source src="media/video-azeitona.mp4" type="video/mp4" />
+          O seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year"></span> FigoDouro — Suçães · Pai Torto · São Pedro</p>
+  </div>
+</footer>
+
+<script src="icons.js"></script>
+<script src="header.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

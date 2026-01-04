@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FigoDouro — Encomenda concluída</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="blackBar">
+    <div class="barInner">
+      <a class="blackLink" href="index.html#sobre">Sobre nós</a>
+    </div>
+  </div>
+
+  <div class="mainBar">
+    <div class="barInner mainInner">
+      <a class="brand" href="index.html" aria-label="FigoDouro">
+        <img src="abs-logo.svg" alt="FigoDouro" />
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="navLink" href="shop.html">Loja</a>
+        <a class="navLink" href="index.html#sobre">Sobre</a>
+        <a class="navLink" href="index.html#video">Vídeo</a>
+      </nav>
+
+      <div class="search">
+        <div class="searchBox">
+          <span id="iconSearch"></span>
+          <input id="search" placeholder="O que procura?" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="iconBtn" href="cart.html" title="Carrinho">
+          <span id="iconCart"></span>
+          <span class="label">Carrinho</span>
+          <span class="badgeDot" id="cartCount">0</span>
+          <span class="label"><strong><span id="cartTotal">0.00</span> €</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="card">
+      <div class="name">Compra finalizada (simulada) ✅</div>
+      <p class="desc" id="info"></p>
+      <div id="summary" class="small"></div>
+      <div style="height:12px"></div>
+      <a class="btn primary" href="shop.html">Voltar à loja</a>
+    </div>
+
+    <footer class="pageFooter">FigoDouro — checkout simulado (sem pagamentos reais).</footer>
+  </div>
+</main>
+
+<script src="icons.js"></script>
+<script src="header.js"></script>
+<script>
+  const order = JSON.parse(localStorage.getItem("lastOrder") || "null");
+  const info = document.getElementById("info");
+  const summary = document.getElementById("summary");
+
+  function fmtQty(i){
+    if(i.unit === "L") {
+      const per = Number(i.packSize || 5);
+      const packs = Number(i.qty || 0) / per;
+      const pTxt = (packs % 1 === 0) ? String(packs) : packs.toFixed(2);
+      return `${pTxt} garrafão(ões) (${Number(i.qty).toFixed(2)} L)`;
+    }
+    if(i.unit === "KG") return `${Number(i.qty).toFixed(2)} Kg`;
+    return `${Number(i.qty)} un`;
+  }
+
+  if (!order) {
+    info.textContent = "Não existe encomenda recente.";
+  } else {
+    info.textContent = `Nº ${order.id} • ${new Date(order.createdAt).toLocaleString("pt-PT")} • Total: ${Number(order.total).toFixed(2)} €`;
+    summary.innerHTML = `
+      <p><strong>Itens:</strong></p>
+      <ul>
+        ${order.items.map(i => `<li>${i.name} — ${fmtQty(i)}</li>`).join("")}
+      </ul>
+    `;
+  }
+</script>
+</body>
+</html>
