@@ -2,19 +2,19 @@
 const PRODUTOS = [
   {
     id: "azeite-5l",
-    name: "Azeite Santa Águeda — Garrafão 5L",
+    name: "Azeite Santa Águeda — Virgem Extra (Garrafão 5L)",
     price: 28.90,
     unit: "L",
     packSize: 5,
-    desc: "Azeite virgem extra transmontano (produção biológica + métodos tradicionais). Indique quantos garrafões pretende.",
+    desc: "Azeite Virgem Extra de Trás-os-Montes. Produção biológica e métodos tradicionais.",
     img: "images/Azeite5L.png"
   },
   {
     id: "azeite-075",
-    name: "Azeite Santa Águeda — 0,75L",
+    name: "Azeite Santa Águeda — Virgem Extra (0,75L)",
     price: 8.90,
     unit: "UN",
-    desc: "Garrafa 0,75L (unidade) — virgem extra, frutado e equilibrado.",
+    desc: "Garrafa 0,75L — Azeite Virgem Extra Santa Águeda.",
     img: "images/Azeite2L.png"
   },
   {
@@ -67,57 +67,45 @@ const PRODUTOS = [
   },
   {
     id: "cabaz-tradicao",
-    name: "Cabaz Tradição (Azeite + Figos)",
-    price: 34.90,
-    unit: "UN",
-    desc: "Seleção para oferecer — azeite e figos.",
-    img: "images/Cabaz.png"
-  }
-  {
-    id: "cabaz-vale-do-tua-classico",
-    name: "Cabaz FigoDouro — Vale do Tua (Clássico)",
+    name: "Cabaz FIGODOURO — Vale do Tua (Clássico)",
     price: 29.90,
     unit: "UN",
-    desc: "Figos secos + snack figo/amêndoa + azeite DOP Mirandela + folheto das aldeias.",
+    desc: "Figos secos (200g) + Snack figo e amêndoa (150g) + Azeite DOP Mirandela (500ml) + folheto com a história das aldeias.",
     img: "images/Cabaz.png"
   },
   {
-    id: "cabaz-vale-do-tua-gourmet",
-    name: "Cabaz FigoDouro — Vale do Tua (Gourmet)",
+    id: "cabaz-vale-tua-gourmet",
+    name: "Cabaz FIGODOURO — Vale do Tua (Gourmet)",
     price: 54.90,
     unit: "UN",
-    desc: "Figo premium + snack figo/noz + compota + azeite Santa Águeda + mel + caixa rígida.",
+    desc: "Figo seco premium + Snack figo e noz + Compota de figo + Azeite premium Santa Águeda (ou equivalente) + Mel de rosmaninho + caixa rígida FigoDouro.",
     img: "images/Cabaz.png"
   },
   {
-    id: "cabaz-vale-do-tua-luxo",
-    name: "Cabaz FigoDouro — Vale do Tua (Luxo)",
+    id: "cabaz-vale-tua-luxo",
+    name: "Cabaz FIGODOURO — Vale do Tua (Luxo)",
     price: 79.90,
     unit: "UN",
-    desc: "Para empresas e exportação: seleção premium, azeite 2L, embalagem madeira e certificado.",
+    desc: "Para empresas e exportação: produtos selecionados + garrafa de azeite 2L + embalagem em madeira + certificado de origem das aldeias.",
     img: "images/Cabaz.png"
-  },
-
+  }
 ];
 
 // Conteúdos das páginas de produto (Home -> abrir detalhe)
 const PRODUCT_PAGES = {
-    "azeite": {
-    title: "Azeite Santa Águeda",
-    subtitle: "Azeite Virgem Extra transmontano — frutado, equilibrado e intenso.",
+  "azeite": {
+    title: "Azeite Santa Águeda — Virgem Extra",
+    subtitle: "Trás-os-Montes... a qualidade sente-se no sabor.",
     img: "images/azeitona.png",
     body: [
-      "O nosso azeite chama-se Azeite Santa Águeda e é produzido em Trás-os-Montes, numa das zonas mais tradicionais de olival em Portugal.",
-      "Nasce entre oliveiras centenárias e práticas de produção biológica combinadas com métodos tradicionais, preservando o carácter do território.",
-      "Apresenta um perfil frutado e equilibrado, típico das variedades transmontanas (Cobrançosa, Verdeal e Madural), com um sabor intenso e grande estabilidade.",
-      "É um azeite muito usado tanto em consumo familiar como em restauração, pela sua versatilidade e pela forma como eleva pratos simples: saladas, peixe grelhado, legumes e pão."
+      "O nosso azeite chama-se <strong>Azeite Santa Águeda</strong>.",
+      "É um azeite produzido em Trás-os-Montes, numa das zonas mais tradicionais de olival em Portugal, com forte presença de oliveiras centenárias e produção de azeite virgem extra de elevada qualidade.",
+      "<strong>Origem:</strong> Trás-os-Montes · <strong>Tipo:</strong> Azeite Virgem Extra · <strong>Produção:</strong> biológica e métodos tradicionais.",
+      "Perfil frutado e equilibrado, típico das variedades transmontanas (Cobrançosa, Verdeal e Madural).",
+      "Muito usado tanto no consumo familiar como em restauração, pela sua estabilidade e sabor intenso."
     ],
-    bullets: [
-      "Origem: Trás-os-Montes",
-      "Tipo: Azeite Virgem Extra",
-      "Produção: biológica + métodos tradicionais",
-      "Variedades: Cobrançosa, Verdeal, Madural"
-    ]
+    bullets: ["Virgem Extra", "Produção biológica + métodos tradicionais", "Frutado, equilibrado e intenso", "Estável para cozinhar e temperar"],
+    sizes: "Capacidades disponíveis: 0,75L e garrafão 5L."
   },
   "figo": {
     title: "Figos",
@@ -178,23 +166,7 @@ const PRODUCT_PAGES = {
     ],
     bullets: ["Consistência e sabor", "Excelente para húmus", "Perfeito para cozidos e sopas"],
     sizes: "Disponível em embalagens de 1Kg."
-  },  "cabazes": {
-    title: "Cabazes FIGODOURO — Vale do Tua",
-    subtitle: "Três versões pensadas para oferta, famílias, empresas e exportação.",
-    img: "images/Cabaz.png",
-    body: [
-      "Os cabazes FigoDouro — Vale do Tua reúnem os sabores mais representativos da nossa terra, com diferentes níveis de seleção e apresentação.",
-      "Versão Clássica (25€–30€): figos secos (200g), snack figo + amêndoa (150g), azeite DOP Mirandela (500ml) e folheto com a história das aldeias.",
-      "Versão Gourmet (45€–55€): figo seco premium, snack figo + noz, compota de figo, azeite premium Santa Águeda (ou equivalente), mel de rosmaninho e caixa rígida FigoDouro.",
-      "Versão Luxo (75€+): para empresas e exportação, com produtos selecionados, garrafa de azeite 2 litros, embalagem em madeira e certificado de origem das aldeias."
-    ],
-    bullets: [
-      "Clássico: perfeito para oferecer",
-      "Gourmet: experiência premium",
-      "Luxo: empresas e exportação"
-    ]
   },
-
   "feijocas": {
     title: "Feijocas",
     subtitle: "Sabor tradicional para pratos de conforto.",
